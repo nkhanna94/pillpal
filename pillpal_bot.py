@@ -31,6 +31,9 @@ def load_llm(repo_id, hf_token):
 
 def main():
     st.title("🩺 PillPal — Because Not Every Headache Means Cancer")
+    
+    if "messages" not in st.session_state:
+        st.session_state["messages"] = []
 
     avatars = {
         "user": "🙋",
