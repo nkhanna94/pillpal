@@ -11,6 +11,10 @@ from langchain_huggingface import HuggingFaceEndpoint
 from dotenv import load_dotenv, find_dotenv
 load_dotenv(find_dotenv())
 
+st.set_page_config(
+    page_title="PillPal Dashboard",
+    page_icon="💊"
+)
 
 DB_FAISS_PATH="vectorstore/db_faiss"
 @st.cache_resource
@@ -30,7 +34,7 @@ def load_llm(repo_id, hf_token):
     )
 
 def main():
-    st.title("🩺 PillPal — Because Not Every Headache Means Cancer")
+    st.title("💊 PillPal — Because Not Every Headache Means Cancer")
     
     if "messages" not in st.session_state:
         st.session_state["messages"] = []
