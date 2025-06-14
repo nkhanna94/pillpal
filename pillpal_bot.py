@@ -12,7 +12,7 @@ from dotenv import load_dotenv, find_dotenv
 load_dotenv(find_dotenv())
 
 st.set_page_config(
-    page_title="PillPal Dashboard",
+    page_title="PillPal",
     page_icon="💊"
 )
 
